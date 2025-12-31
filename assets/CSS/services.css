@@ -1,0 +1,94 @@
+/* ============================================ */
+/* Service Pages Styles */
+/* ============================================ */
+
+/* Service Icon Above Headings */
+.service-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-icon i {
+    font-size: 48px;
+    color: var(--primary-color);
+}
+
+/* Service Heading */
+.service-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+/* Service Section Paragraphs */
+.common-problms p,
+.how-we-help p,
+.why-triangle-debt-defense p {
+    font-size: 15px;
+    color: var(--color-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.service-divider{
+    width: 80%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 20px auto;
+}
+/* ============================================ */
+/* Media Queries */
+/* ============================================ */
+
+/* Tablet - 992px */
+@media (max-width: 992px) {
+    .service-icon i {
+        font-size: 42px;
+    }
+
+    .service-heading {
+        font-size: 28px;
+    }
+}
+
+/* Mobile - 768px */
+@media (max-width: 768px) {
+    .service-icon {
+        margin-bottom: 15px;
+    }
+
+    .service-icon i {
+        font-size: 38px;
+    }
+
+    .service-heading {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .common-problms p,
+    .how-we-help p,
+    .why-triangle-debt-defense p {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+    .service-icon i {
+        font-size: 34px;
+    }
+
+    .service-heading {
+        font-size: 22px;
+    }
+
+    .common-problms p,
+    .how-we-help p,
+    .why-triangle-debt-defense p {
+        font-size: 13px;
+    }
+}

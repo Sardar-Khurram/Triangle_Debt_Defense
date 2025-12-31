@@ -45,3 +45,98 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
+
+// ============================================
+// Scroll-Triggered Animations
+// ============================================
+
+// Create a general Intersection Observer for all animated sections
+const animationObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add 'animate' class when section comes into view
+            entry.target.classList.add('animate');
+            // Stop observing after animation triggers (one-time animation)
+            animationObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15, // Trigger when 15% of section is visible
+    rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters viewport
+});
+
+// Function to observe elements with animations
+function observeAnimatedElements() {
+    // Hero Section
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.style.animationPlayState = 'paused';
+        animationObserver.observe(heroContent);
+    }
+
+    // Who We Are Section
+    const whoLeftContent = document.querySelector('.who-left-content');
+    const whoRightForm = document.querySelector('.who-right-form');
+    if (whoLeftContent) {
+        whoLeftContent.style.animationPlayState = 'paused';
+        animationObserver.observe(whoLeftContent);
+    }
+    if (whoRightForm) {
+        whoRightForm.style.animationPlayState = 'paused';
+        animationObserver.observe(whoRightForm);
+    }
+
+    // Who Bottom Section (Feature Boxes)
+    const featureBoxes = document.querySelectorAll('.feature-box');
+    featureBoxes.forEach(box => {
+        box.style.animationPlayState = 'paused';
+        animationObserver.observe(box);
+    });
+
+    // What We Do Section (Service Cards)
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.style.animationPlayState = 'paused';
+        animationObserver.observe(card);
+    });
+
+    // Our Promise Section (Promise Wrappers)
+    const promiseWrappers = document.querySelectorAll('.promise-wrapper');
+    promiseWrappers.forEach(wrapper => {
+        wrapper.style.animationPlayState = 'paused';
+        animationObserver.observe(wrapper);
+    });
+
+    // CTA Section
+    const ctaContent = document.querySelector('.cta-content');
+    const ctaButtonWrapper = document.querySelector('.cta-button-wrapper');
+    if (ctaContent) {
+        ctaContent.style.animationPlayState = 'paused';
+        animationObserver.observe(ctaContent);
+    }
+    if (ctaButtonWrapper) {
+        ctaButtonWrapper.style.animationPlayState = 'paused';
+        animationObserver.observe(ctaButtonWrapper);
+    }
+
+    // Why Choose Us Section
+    const whyCard = document.querySelector('.why-card');
+    if (whyCard) {
+        whyCard.style.animationPlayState = 'paused';
+        animationObserver.observe(whyCard);
+    }
+
+    // Contact Us Section
+    const contactCards = document.querySelector('.contact-cards');
+    if (contactCards) {
+        contactCards.style.animationPlayState = 'paused';
+        animationObserver.observe(contactCards);
+    }
+}
+
+// Initialize observers when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observeAnimatedElements);
+} else {
+    observeAnimatedElements();
+}

@@ -1,0 +1,433 @@
+/* ============================================ */
+/* About Page Hero Section */
+/* ============================================ */
+
+.about-hero-section {
+    background-color: var(--tertiary-color);
+}
+
+.about-hero-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Column - Text Content */
+.about-hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+/* .about-hero-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+} */
+
+.about-hero-heading i {
+    color: var(--secondary-color);
+    font-size: 48px;
+}
+
+
+/* Right Column - Image */
+.about-hero-image {
+    flex: 1;
+    max-width: 450px;
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================ */
+/* About Page Contact Us Section */
+/* ============================================ */
+
+.about-contact-section {
+    background-color: var(--primary-color);
+    padding: 60px 0;
+}
+
+.about-contact-section .contact-title {
+    color: white;
+}
+
+.about-contact-section .contact-title::before,
+.about-contact-section .contact-title::after {
+    background-color: white;
+}
+
+.about-contact-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+/* Right: Contact Cards */
+.about-contact-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 550px;
+}
+
+.about-contact-card {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-contact-icon {
+    background-color: var(--primary-color);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.about-contact-icon i {
+    font-size: 24px;
+}
+
+.about-contact-text {
+    flex: 1;
+}
+
+.contact-card-description {
+    font-size: 14px;
+    color: var(--color-light);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.contact-card-info {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* ============================================ */
+/* Vision & Mission Section */
+/* ============================================ */
+
+.vision-mission-section {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+}
+
+.vision-mission-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin: 0 auto;
+}
+
+.vision-card,
+.mission-card {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.vision-card:hover,
+.mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.vm-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.vm-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(35deg, var(--primary-color), #152038);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(28, 42, 72, 0.3);
+    transition: all 0.3s ease;
+}
+
+.vision-card:hover .vm-icon,
+.mission-card:hover .vm-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(28, 42, 72, 0.5);
+}
+
+.vm-icon i {
+    font-size: 24px;
+    color: var(--white-color);
+}
+
+.vm-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.vm-description {
+    font-size: 15px;
+    color: var(--color-light);
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ============================================ */
+/* Media Queries - Organized by Breakpoint */
+/* ============================================ */
+
+/* Tablet - 992px */
+@media (max-width: 992px) {
+
+    /* Hero Section */
+    .about-hero-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-hero-content,
+    .about-hero-image {
+        max-width: 100%;
+    }
+
+    .about-hero-heading {
+        font-size: 28px;
+    }
+
+    /* Contact Section */
+    .about-contact-container {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about-contact-section .who-right-form,
+    .about-contact-cards {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Vision & Mission Section */
+    .vision-mission-section {
+        padding: 60px 0;
+    }
+
+    .vision-mission-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .vision-card,
+    .mission-card {
+        padding: 40px 30px;
+    }
+
+    .about-hero-heading i {
+        font-size: 32px;
+    }
+}
+
+/* Mobile - 768px */
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    .about-hero-section {
+        padding: 40px 0;
+    }
+
+    .about-hero-heading {
+        font-size: 24px;
+    }
+
+    .about-hero-heading i {
+        font-size: 22px;
+    }
+
+    .about-hero-text {
+        font-size: 13px;
+    }
+
+    /* Contact Section */
+    .about-contact-section {
+        padding: 40px 0;
+    }
+
+    .about-contact-cards {
+        gap: 25px;
+    }
+
+    .about-contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .about-contact-icon i {
+        font-size: 20px;
+    }
+
+    .contact-card-description {
+        font-size: 13px;
+    }
+
+    .contact-card-info {
+        font-size: 15px;
+    }
+
+    /* Vision & Mission Section */
+    .vision-mission-section {
+        padding: 50px 0;
+    }
+
+    .vm-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .vm-icon i {
+        font-size: 32px;
+    }
+
+    .vm-title {
+        font-size: 24px;
+    }
+
+    .vm-description {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+
+    /* Hero Section */
+    .about-hero-section {
+        padding: 30px 0;
+    }
+
+    .about-hero-container {
+        gap: 30px;
+    }
+
+    .about-hero-heading {
+        font-size: 22px;
+        gap: 10px;
+    }
+
+    .about-hero-image {
+        padding: 15px;
+    }
+
+    /* Contact Section */
+    .about-contact-section {
+        padding: 30px 0;
+    }
+
+    .about-contact-container {
+        gap: 40px;
+    }
+
+    .about-contact-card {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .about-contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .about-contact-icon i {
+        font-size: 18px;
+    }
+
+    .contact-card-description {
+        font-size: 12px;
+    }
+
+    .contact-card-info {
+        font-size: 14px;
+    }
+
+    /* Vision & Mission Section */
+    .vision-mission-section {
+        padding: 40px 0;
+    }
+
+    .vision-card,
+    .mission-card {
+        padding: 35px 25px;
+    }
+
+    .vm-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .vm-icon i {
+        font-size: 28px;
+    }
+
+    .vm-title {
+        font-size: 22px;
+    }
+
+    .vm-description {
+        font-size: 13px;
+    }
+
+    /* Practice Areas */
+    .practise-areas {
+        padding: 40px 0;
+    }
+
+    .practice-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .practice-image {
+        height: 160px;
+    }
+
+    .practice-title {
+        font-size: 16px;
+    }
+
+    .practice-description {
+        font-size: 12px;
+    }
+}
