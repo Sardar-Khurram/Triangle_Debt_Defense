@@ -100,11 +100,24 @@ function observeAnimatedElements() {
         animationObserver.observe(card);
     });
 
-    // Our Promise Section (Promise Wrappers)
+    // Our Promise Section (Promise Wrappers) - Use animation:none approach
     const promiseWrappers = document.querySelectorAll('.promise-wrapper');
     promiseWrappers.forEach(wrapper => {
-        wrapper.style.animationPlayState = 'paused';
-        animationObserver.observe(wrapper);
+        wrapper.style.animation = 'none';
+    });
+
+    // Create separate observer for promise wrappers
+    const promiseObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'promise-wrapper 3s ease forwards';
+                promiseObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    promiseWrappers.forEach(wrapper => {
+        promiseObserver.observe(wrapper);
     });
 
     // CTA Section

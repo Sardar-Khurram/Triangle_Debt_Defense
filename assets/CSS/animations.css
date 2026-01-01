@@ -1,4 +1,0 @@
-/* Add this CSS rule to enable animation play on scroll */
-.animate {
-    animation-play-state: running !important;
-}

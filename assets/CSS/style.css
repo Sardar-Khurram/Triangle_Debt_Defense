@@ -95,6 +95,10 @@ ul {
     padding: 30px 60px;
 }
 
+.animate {
+    animation-play-state: running !important;
+}
+
 /* Header & Navigation */
 header {
     position: fixed;
